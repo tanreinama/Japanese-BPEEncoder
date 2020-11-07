@@ -43,7 +43,7 @@ class BPEEncoder_ja:
             text = self.clean_text(text)
         pos = 0
         result = []
-        while pos+1 < len(text):
+        while pos < len(text):
             bp = False
             end = min(len(text), pos+self.maxlen+1) if text[pos]=='<' else pos+2
             for e in range(end, pos, -1):
